@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Kategorije extends Model
 {
     public $timestamps = false;
-
+    protected $table='kategorije';
     use HasFactory;
 
     protected $fillable = [

@@ -70,7 +70,7 @@ class GunController extends Controller
                ->get();
 
         $izmedju=DB::table('guns')
-            ->whereRaw('guns.cijena BETWEEN ' . 0 . ' AND ' . 500 . '')
+            ->whereBetween('guns.cijena',[0, 500])
             ->orderBy('cijena')
             ->limit(4)
             ->get();
@@ -85,6 +85,7 @@ class GunController extends Controller
         $riley=DB::table('guns')
             ->select('guns.*')
             ->where('idBrend','=','2')
+            ->limit(4)
             ->get();
 
         return view('guns.home',['guns' => $guns, 'brands'=> $brands, 'kategorije'=>$kategorije, 'novi'=>$novi, 'best'=>$best, 'drzava'=>$drzava, 'izmedju'=>$izmedju, 'kao'=>$kao, 'data'=>$data]);

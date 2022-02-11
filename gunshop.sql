@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2022 at 07:51 PM
+-- Generation Time: Feb 11, 2022 at 09:13 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -42,7 +42,51 @@ INSERT INTO `brands` (`id`, `imeBrand`, `drzava`) VALUES
 (2, 'Riley Defense', 'Canada'),
 (3, 'Pioneer Arms', 'Germany'),
 (4, 'Chioppa', 'North Korea'),
-(5, 'Windham Weaponry', 'Great Britain');
+(5, 'Windham Weaponry', 'Great Britain'),
+(6, 'Shana Miller', 'Mrs. Hettie Cummings DDS'),
+(7, 'Mrs. Maryjane Reilly DDS', 'Cassandra Ullrich'),
+(8, 'Dorris Baumbach', 'Alicia Ernser'),
+(9, 'Newell Schamberger Jr.', 'Prof. Nedra Kuvalis'),
+(10, 'Alexandrea Kuvalis', 'Juvenal Russel IV');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carts`
+--
+
+CREATE TABLE `carts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `idKupac` int(11) NOT NULL,
+  `idGun` int(11) NOT NULL,
+  `datum` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `idKupac`, `idGun`, `datum`) VALUES
+(1, 16, 34, '2022-02-09'),
+(2, 4, 20, '2022-02-09'),
+(3, 13, 30, '2022-02-09'),
+(4, 9, 28, '2022-02-09'),
+(5, 11, 27, '2022-02-09'),
+(6, 1, 23, '2022-02-09'),
+(7, 1, 23, '2022-02-09'),
+(8, 10, 28, '2022-02-09'),
+(9, 4, 20, '2022-02-09'),
+(10, 2, 28, '2022-02-09'),
+(11, 15, 34, '2022-02-09'),
+(12, 11, 21, '2022-02-09'),
+(13, 14, 24, '2022-02-09'),
+(14, 15, 24, '2022-02-09'),
+(15, 6, 27, '2022-02-09'),
+(16, 9, 24, '2022-02-09'),
+(17, 8, 18, '2022-02-09'),
+(18, 10, 30, '2022-02-09'),
+(19, 10, 35, '2022-02-09'),
+(20, 15, 28, '2022-02-09');
 
 -- --------------------------------------------------------
 
@@ -95,7 +139,17 @@ INSERT INTO `guns` (`id`, `nazivGun`, `idBrend`, `idKat`, `opis`, `cijena`, `rat
 (24, 'Nosler M48 Long-Range Carbon, .33', 5, 3, 'Action : Bolt\r\nCaliber : 33 Nosler\r\nBarrel Length : 26\"\r\nCapacity : 3+1\r\nTrigger : Timney\r\nSafety : Two Position\r\nOAL : 48\"\r\nWeight : 7 lbs', 3202.19, 4, '1642863025.PNG'),
 (25, 'Inland Model T30 M1 Carbine .30 Carbine 18\"', 1, 3, 'Action : Bolt\r\nCaliber : 30 Carbine\r\nBarrel Length : 18\"\r\nCapacity : 10+1\r\nOAL : 35.75\"\r\nWeight : 6 lbs', 2036.19, 3, '1642863273.PNG'),
 (26, 'HK MR556, 5.56mm Package 16.5\" Barrel', 2, 3, 'A direct descendent of the HK416, the MR556A1 is a semi-automatic rifle developed by Heckler & Koch as a premium level commercial/civilian firearm with match rifle capability.', 5525.29, 5, '1642863615.jpg'),
-(27, 'Maverick 88 Pump Security/Special Purpose 12 ga 18.5\"', 3, 2, 'Action : Pump\r\nGauge : 12 Gauge\r\nBarrel Length : 18.5\"\r\nCapacity : 5+1\r\nChamber : 3\"\r\nOAL : 39.5\"\r\nWeight : 7 lbs', 238.89, 3, '1642863797.png');
+(27, 'Maverick 88 Pump Security/Special Purpose 12 ga 18.5\"', 3, 2, 'Action : Pump\r\nGauge : 12 Gauge\r\nBarrel Length : 18.5\"\r\nCapacity : 5+1\r\nChamber : 3\"\r\nOAL : 39.5\"\r\nWeight : 7 lbs', 238.89, 3, '1642863797.png'),
+(28, 'aliquam', 5, 1, 'Nemo vero quibusdam consectetur neque sunt qui et ad. Ratione expedita voluptas vel hic incidunt cum. Facilis eos adipisci impedit commodi. Minima voluptatem nisi omnis quis mollitia a sequi optio.', 1350, 1, '1642859858.jpg'),
+(29, 'vel', 4, 5, 'Debitis ad ullam nihil nisi et. Ratione alias dolorem sit. Et in dolorum blanditiis. Rerum magni debitis est asperiores.', 679, 2, '1642859858.jpg'),
+(30, 'quo', 3, 1, 'Repudiandae rerum numquam dicta assumenda blanditiis provident. Et culpa impedit exercitationem ullam. Ut inventore quia sit voluptates tenetur provident.', 1062, 5, '1642859858.jpg'),
+(31, 'aut', 5, 4, 'Aspernatur molestiae dolore nulla quia quam. Et culpa omnis magnam qui id quos voluptas ratione.', 1868, 4, '1642859858.jpg'),
+(32, 'impedit', 1, 5, 'Qui voluptate enim rerum velit nemo illo quos. Eos iste molestias atque. Quibusdam reprehenderit facere ipsa quo. Nam mollitia qui et itaque earum accusamus consequatur.', 1050, 3, '1642859858.jpg'),
+(33, 'et', 1, 1, 'Explicabo dolorem qui ex. Voluptas doloribus et odio inventore. Omnis autem atque ab earum.', 1246, 5, '1642859858.jpg'),
+(34, 'ad', 1, 3, 'Iure aut perspiciatis harum alias. Eaque nostrum eum rerum voluptatem vel animi laboriosam. Reiciendis voluptatem quas temporibus asperiores.', 638, 3, '1642859858.jpg'),
+(35, 'voluptatem', 3, 4, 'Sed atque sit saepe quia occaecati. Et ut qui consequatur tempore sit in rerum. Dolore molestiae harum molestiae facilis quam maxime cum. Nihil qui vero id sint.', 634, 2, '1642859858.jpg'),
+(36, 'quaerat', 5, 2, 'Optio nostrum sed omnis non quia vel laudantium repellendus. Qui voluptate aliquid eaque excepturi non asperiores. Maxime non iste recusandae delectus.', 559, 3, '1642859858.jpg'),
+(37, 'quod', 1, 2, 'Sed pariatur culpa dolores omnis possimus. Dolor vero quia unde beatae impedit. Et alias eligendi quo. In sunt inventore ad vero ducimus repudiandae.', 1289, 2, '1642859858.jpg');
 
 -- --------------------------------------------------------
 
@@ -119,7 +173,8 @@ INSERT INTO `kategorije` (`id`, `imeKat`, `opisKat`, `slikaKat`) VALUES
 (2, 'Pumparica', 'Radnja pumpe ili akcija klizanja je ponavljajuća akcija vatrenog oružja kojom se ručno upravlja pomicanjem kliznog štitnika za ruke na prednjem dijelu pištolja.', 'shotgun.jpg'),
 (3, 'Snajperi', 'Snajperska puška je puška dizajnirana da, na većim udaljenostima, bude preciznija od ostalih streljačkih oružja. ', 'sniper.jpg'),
 (4, 'Automatic', 'Automatsko oružje je vatreno oružje kojem tlak plina ili druga tehnička rješenja pri ispaljivanju projektila pokreću mehanizam za ponovno punjenje i opaljivanje sljedećeg metka. ', 'automatska.jpg'),
-(6, 'Repetirka', 'Puška koja se ponavlja je jednocijevna puška sposobna za višestruko pražnjenje između svakog punjenja municije.', 'repetirka.jpg');
+(6, 'Repetirka', 'Puška koja se ponavlja je jednocijevna puška sposobna za višestruko pražnjenje između svakog punjenja municije.', 'repetirka.jpg'),
+(7, 'corporis', 'Quibusdam adipisci laborum et ducimus. Est et sed consequatur voluptatem. Necessitatibus sint perspiciatis quia at omnis qui cumque.', 'automatska.jpg');
 
 -- --------------------------------------------------------
 
@@ -146,7 +201,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2022_01_16_173001_create_sessions_table', 1),
 (7, '2022_01_16_174829_create_guns_table', 1),
 (8, '2022_01_16_181056_create_kategorijes_table', 2),
-(9, '2022_01_16_182014_create_brands_table', 3);
+(9, '2022_01_16_182014_create_brands_table', 3),
+(10, '2022_02_09_121720_create_carts_table', 4);
 
 -- --------------------------------------------------------
 
@@ -198,7 +254,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('ypqkgseJR69wvWkXTaxkqD1SlBMgjAUTWMGzATiv', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoienZhcUFWRWdkcUptVldwRXpTTjE5bnd6RHU2OVdQWWFoZnNRdm9OcyI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMyOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAva2F0ZWdvcmlqZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRVVVdUaDRodHZzUkFLb09CR3VmVWwudGpwZ3FjeUtPNW9rMFIvZjlja0UubDZOT1cvM25iQyI7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkVVVXVGg0aHR2c1JBS29PQkd1ZlVsLnRqcGdxY3lLTzVvazBSL2Y5Y2tFLmw2Tk9XLzNuYkMiO30=', 1643308336);
+('kAkzJQWnZNFTkvagRtKCUAwZcT0S2iDdJn9Iaylt', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiME1FR3E3Z1B2R0NOVkRiaFVqaHdacDF4MnRmM3JRUXlvQWRVVXhxbSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI3OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvY2FydHMiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkVVVXVGg0aHR2c1JBS29PQkd1ZlVsLnRqcGdxY3lLTzVvazBSL2Y5Y2tFLmw2Tk9XLzNuYkMiO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJFVVV1RoNGh0dnNSQUtvT0JHdWZVbC50anBncWN5S081b2swUi9mOWNrRS5sNk5PVy8zbmJDIjt9', 1644609065),
+('lEjiLZpSLRdDGiLBjmeDKuRdacZCSbDOVcFCIk7q', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 OPR/82.0.4227.50', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiN0hkRldBTzNJT1pkSGdZY3RUZGdRTERma096bGZzN2t1cmQ0djU3VSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI3OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvY2FydHMiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkVVVXVGg0aHR2c1JBS29PQkd1ZlVsLnRqcGdxY3lLTzVvazBSL2Y5Y2tFLmw2Tk9XLzNuYkMiO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJFVVV1RoNGh0dnNSQUtvT0JHdWZVbC50anBncWN5S081b2swUi9mOWNrRS5sNk5PVy8zbmJDIjt9', 1644413637);
 
 -- --------------------------------------------------------
 
@@ -226,7 +283,22 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-(1, 'Lema', 'alemahusic@gmail.com', NULL, '$2y$10$UUWTh4htvsRAKoOBGufUl.tjpgqcyKO5ok0R/f9ckE.l6NOW/3nbC', NULL, NULL, NULL, NULL, NULL, '2022-01-16 17:06:41', '2022-01-16 17:06:41');
+(1, 'Lema', 'alemahusic@gmail.com', NULL, '$2y$10$UUWTh4htvsRAKoOBGufUl.tjpgqcyKO5ok0R/f9ckE.l6NOW/3nbC', NULL, NULL, NULL, NULL, NULL, '2022-01-16 17:06:41', '2022-01-16 17:06:41'),
+(2, 'Murphy Durgan', 'junior27@example.net', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'C2ZMmpcLYu', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(3, 'Freddy Labadie', 'gdaugherty@example.com', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'GOA5Fv8aVm', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(4, 'Mrs. Clarissa Oberbrunner', 'mkoelpin@example.com', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'Lzed3iLeXf', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(5, 'Mr. Brice Schmidt V', 'gretchen60@example.org', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'RPxNRO2vWV', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(6, 'Karson Kshlerin', 'conroy.hobart@example.net', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'HwADNTSiSG', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(7, 'Miss Meggie Harris II', 'whoppe@example.org', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, '4A1DxY8M1w', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(8, 'Eva Stokes', 'apurdy@example.org', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'PpLxSvFcP8', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(9, 'Keon Corwin', 'jedidiah.jones@example.com', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'O4pHhqqPeO', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(10, 'Twila Larson', 'paige94@example.org', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'rR45VXFLqJ', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(11, 'Adolfo Nicolas', 'margie.schneider@example.net', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'xSA7UuBVAP', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(12, 'Bernita Davis', 'emerson.witting@example.net', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'PQmwoeGrvF', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(13, 'Alexandre Roberts III', 'beffertz@example.com', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'DmNydevWu8', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(14, 'Lisette O\'Connell', 'danyka.cormier@example.com', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, 'GWUdjH1DhY', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(15, 'Jerad Hammes', 'kenyatta57@example.com', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, '8aol4LgIJz', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50'),
+(16, 'Prof. Hubert Schowalter', 'darby88@example.org', '2022-02-09 10:52:50', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', NULL, NULL, '8LXVzdAE1q', NULL, NULL, '2022-02-09 10:52:50', '2022-02-09 10:52:50');
 
 --
 -- Indexes for dumped tables
@@ -236,6 +308,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `tw
 -- Indexes for table `brands`
 --
 ALTER TABLE `brands`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `carts`
+--
+ALTER TABLE `carts`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -300,7 +378,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `carts`
+--
+ALTER TABLE `carts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -312,19 +396,19 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `guns`
 --
 ALTER TABLE `guns`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `kategorije`
 --
 ALTER TABLE `kategorije`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -336,7 +420,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

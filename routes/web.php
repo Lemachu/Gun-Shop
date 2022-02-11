@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GunController;
 use App\Http\Controllers\KategorijeController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CartController;
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
     return view('dashboard');
@@ -20,3 +21,5 @@ Route::middleware(['auth:sanctum', 'verified'])->post('store_gun', [GunControlle
 Route::middleware(['auth:sanctum', 'verified'])->post('delete_gun', [GunController::class, 'destroy'])->name('delete_gun');
 Route::middleware(['auth:sanctum', 'verified'])->post('edit_gun', [GunController::class, 'edit'])->name('edit_gun');
 Route::middleware(['auth:sanctum', 'verified'])->post('update_gun', [GunController::class, 'update'])->name('update_gun');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('carts', [CartController::class, 'index'])->name('carts');
